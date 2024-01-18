@@ -28,3 +28,4 @@ C:\Users\priir\Documents\College\ThirdYear\Research\repos\FinalProject\FinalProj
 C:\Users\priir\Documents\College\ThirdYear\Research\repos\FinalProject\FinalProject\obj\Debug\net7.0\FinalProject.pdb
 C:\Users\priir\Documents\College\ThirdYear\Research\repos\FinalProject\FinalProject\obj\Debug\net7.0\FinalProject.genruntimeconfig.cache
 C:\Users\priir\Documents\College\ThirdYear\Research\repos\FinalProject\FinalProject\obj\Debug\net7.0\ref\FinalProject.dll
+C:\Users\priir\Documents\College\ThirdYear\Research\repos\FinalProject\FinalProject\obj\Debug\net7.0\FinalProject.sourcelink.json

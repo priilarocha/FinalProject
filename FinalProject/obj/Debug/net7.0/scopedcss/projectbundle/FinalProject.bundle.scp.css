@@ -47,3 +47,18 @@ button.accept-policy[b-1iqdgs6srz] {
   white-space: nowrap;
   line-height: 60px;
 }
+
+
+
+.bio[b-1iqdgs6srz] {
+    color: #000000;
+    text-align: left;
+    font-family: "Roboto-Regular", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    position: absolute;
+    left: 427px;
+    top: 148px;
+    width: 862px;
+    height: 124px;
+}
