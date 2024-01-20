@@ -1,22 +1,85 @@
-html {
-  font-size: 14px;
+.profile-page,
+.profile-page * {
+    box-sizing: border-box;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+.profile-page {
+    background: #ffffff;
+    width: 1440px;
+    height: 1024px;
+    position: relative;
+    overflow: hidden;
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+.profile-image {
+    width: 240px;
+    height: 240px;
+    position: absolute;
+    left: 115px;
+    top: 142px;
+    object-fit: cover;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+.username {
+    color: #000000;
+    text-align: center;
+    font-family: "PressStart2P-Regular", sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    position: absolute;
+    left: 400px;
+    top: 99px;
+    width: 502px;
+    height: 30px;
 }
 
-body {
-  margin-bottom: 60px;
+.bio {
+    color: #000000;
+    text-align: left;
+    font-family: "Roboto-Regular", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    position: absolute;
+    left: 427px;
+    top: 148px;
+    width: 862px;
+    height: 124px;
+}
+
+.favorites {
+    color: #000000;
+    text-align: center;
+    font-family: "PressStart2P-Regular", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    position: absolute;
+    left: 400px;
+    top: 286px;
+    width: 464px;
+    height: 37px;
+}
+.playing-played {
+    color: #000000;
+    text-align: center;
+    font-family: "PressStart2P-Regular", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    position: absolute;
+    left: 400px;
+    top: 610px;
+    width: 464px;
+    height: 37px;
+}
+
+.wishlist {
+    color: #000000;
+    text-align: center;
+    font-family: "PressStart2P-Regular", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    position: absolute;
+    left: 400px;
+    top: 873px;
+    width: 464px;
+    height: 37px;
 }
