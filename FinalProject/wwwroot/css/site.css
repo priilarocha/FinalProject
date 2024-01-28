@@ -20,6 +20,28 @@
     object-fit: cover;
 }
 
+.friends {
+    color: #000000;
+    text-align: center;
+    font-family: "PressStart2P-Regular", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    position: absolute;
+    left: 63px;
+    top: 430px;
+    width: 177px;
+    height: 20px;
+}
+
+.iconFriend1 {
+    width: 53px;
+    height: 52px;
+    position: absolute;
+    left: 95px;
+    top: 470px;
+    object-fit: cover;
+}
+
 .username {
     color: #000000;
     text-align: center;
@@ -54,10 +76,20 @@
     font-weight: 400;
     position: absolute;
     left: 400px;
-    top: 286px;
+    top: 290px;
     width: 464px;
     height: 37px;
 }
+
+.favoriteGame1 {
+    width: 150px;
+    height: 241.16px;
+    position: absolute;
+    left: 450px;
+    top: 330px;
+    object-fit: cover;
+}
+
 .playing-played {
     color: #000000;
     text-align: center;
@@ -66,9 +98,18 @@
     font-weight: 400;
     position: absolute;
     left: 400px;
-    top: 610px;
+    top: 600px;
     width: 464px;
     height: 37px;
+}
+
+.playingGame1 {
+    width: 150px;
+    height: 241.16px;
+    position: absolute;
+    left: 450px;
+    top: 640px;
+    object-fit: cover;
 }
 
 .wishlist {
@@ -79,7 +120,18 @@
     font-weight: 400;
     position: absolute;
     left: 400px;
-    top: 873px;
+    top: 910px;
     width: 464px;
     height: 37px;
 }
+
+.wishlistGame1 {
+    width: 150px;
+    height: 241.16px;
+    position: relative;
+    left: 450px;
+    top: 950px;
+    object-fit: cover;
+}
+
+

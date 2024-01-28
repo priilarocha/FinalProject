@@ -3,9 +3,22 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<head>
+    <script src = "/js/site.js"></script>
+</head>
+
 <div class="profile-page">
     <img class="profile-image"
          src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Video-Game-Controller-Icon-IDV-green.svg/800px-Video-Game-Controller-Icon-IDV-green.svg.png" />
+         <button onclick = "show_login()">Login</button>
+         <div id = "login_container">
+            <form action = "">         
+                <input type = "text" id = "Username" />
+                <input type = "password" id = "Password" />
+                <input type = "submit" id = "login" value = "Submit" onclick = "Send_User_Credentials()" />
+            </form>
+            <div id = "error"></div>
+         </div>
     <div class="profile">
         <h1 div class="username">prilarocha</h1>
         <div class="bio">
@@ -13,8 +26,14 @@
             #GamingCommunity.
         </div>
         <div class="favorites">Favorites</div>
+        <img class="favoriteGame1" src="https://image.smythstoys.com/zoom/157612.jpg" />
         <div class="playing-played">Playing/played</div>
+        <img class="playingGame1" src="https://image.smythstoys.com/zoom/157612.jpg" />
         <div class="wishlist">Wishlist</div>
+        <img class="wishlistGame1" src="https://image.smythstoys.com/zoom/157612.jpg" />
+        <div class="friends">Friends</div>
+        <img class="iconFriend1" src="https://img.freepik.com/premium-vector/anonymous-user-circle-icon-vector-illustration-flat-style-with-long-shadow_520826-1931.jpg"
+  />
     </div>
 </div>
 
