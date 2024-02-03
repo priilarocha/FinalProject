@@ -128,10 +128,12 @@
 .wishlistGame1 {
     width: 150px;
     height: 241.16px;
-    position: relative;
+    position: absolute;
     left: 450px;
     top: 950px;
     object-fit: cover;
 }
+
+
 
 
