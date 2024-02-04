@@ -12,27 +12,22 @@ function Send_User_Credentials() {
     // If the user is not authenticated, the server will send back a 401 error
     // The server will also send back a 400 error if the user does not provide
     // a username and password
-    var username = document.getElementById("username").value;
-    var password = document.getElementById("password").value;
-    var data = { "username": username, "password": password };
+
     $.ajax({
         type: "POST",
-        url: "/Home/Login.aspx",
-        data: JSON.stringify(data),
         contentType: "application/json; charset=utf-8",
         dataType: "json",
+        data: JSON.stringify({
+            Username: document.getElementById("Username").value,
+            Password: document.getElementById("Password").value
+        }),
+        url: "/User/Login",
         success: function (data) {
-            // If the server sends back a 200 status code, then the user is authenticated and we can redirect them to the home page
-            if (data.status == 200) {
-                document.getElementById("error").innerHTML = "Success!!!";
-                //window.location.href = "/Home/Index";
-            }
+            window.alert(data.responseText);
+            //document.getElementById("error").innerHTML = data.responseText;
         },
         error: function (data) {
-            // If the server sends back a 401 status code, then the user is not authenticated and we should display an error message
-            if (data.status == 401) {
-                document.getElementById("error").innerHTML = "Invalid username or password";
-            }
+            window.alert("error");
         }
     });
 }
