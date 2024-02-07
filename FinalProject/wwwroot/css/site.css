@@ -1,22 +1,314 @@
-html {
-  font-size: 14px;
+.desktop,
+.desktop * {
+    box-sizing: border-box;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+.desktop {
+    background: #ffffff;
+    width: 1440px;
+    height: 1024px;
+    position: relative;
+    overflow: hidden;
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+.profile-image {
+    width: 240px;
+    height: 240px;
+    position: absolute;
+    left: 115px;
+    top: 142px;
+    object-fit: cover;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+.friends {
+    color: #000000;
+    text-align: center;
+    font-family: 'Press Start 2P', system-ui;
+    font-size: 24px;
+    font-weight: 400;
+    position: absolute;
+    left: 63px;
+    top: 430px;
+    width: 177px;
+    height: 20px;
 }
 
-body {
-  margin-bottom: 60px;
+.iconFriend1 {
+    width: 53px;
+    height: 52px;
+    position: absolute;
+    left: 95px;
+    top: 470px;
+    object-fit: cover;
 }
+
+.username {
+    color: #000000;
+    text-align: center;
+    font-family: 'Press Start 2P', system-ui;
+    font-size: 32px;
+    font-weight: 400;
+    position: absolute;
+    left: 400px;
+    top: 99px;
+    width: 502px;
+    height: 30px;
+}
+
+.bio {
+    color: #000000;
+    text-align: left;
+    font-family: "Roboto-Regular", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    position: absolute;
+    left: 427px;
+    top: 148px;
+    width: 862px;
+    height: 124px;
+}
+
+.favorites {
+    color: #000000;
+    text-align: center;
+    font-family: 'Press Start 2P', system-ui;
+    font-size: 24px;
+    font-weight: 400;
+    position: absolute;
+    left: 400px;
+    top: 290px;
+    width: 464px;
+    height: 37px;
+}
+
+.favoriteGame1 {
+    width: 150px;
+    height: 241.16px;
+    position: absolute;
+    left: 450px;
+    top: 330px;
+    object-fit: cover;
+}
+
+.playing-played {
+    color: #000000;
+    text-align: center;
+    font-family: 'Press Start 2P', system-ui;
+    font-size: 24px;
+    font-weight: 400;
+    position: absolute;
+    left: 400px;
+    top: 600px;
+    width: 464px;
+    height: 37px;
+}
+
+.playingGame1 {
+    width: 150px;
+    height: 241.16px;
+    position: absolute;
+    left: 450px;
+    top: 640px;
+    object-fit: cover;
+}
+
+.wishlist {
+    color: #000000;
+    text-align: center;
+    font-family: 'Press Start 2P', system-ui;
+    font-size: 24px;
+    font-weight: 400;
+    position: absolute;
+    left: 400px;
+    top: 910px;
+    width: 464px;
+    height: 37px;
+}
+
+.wishlistGame1 {
+    width: 150px;
+    height: 241.16px;
+    position: relative;
+    left: 450px;
+    top: 950px;
+    object-fit: cover;
+}
+
+.app-title {
+    color: #000000;
+    text-align: center;
+    font-family: 'Press Start 2P', system-ui;
+    font-size: 64px;
+    font-weight: 400;
+    position: absolute;
+    left: 400px;
+    top: 20px;
+    width: 464px;
+    height: 37px;
+}
+
+.username-field {
+    background: #d9d9d9;
+    border-radius: 13px;
+    border-style: solid;
+    border-color: #000000;
+    border-width: 1px;
+    position: absolute;
+    left: 450px;
+    top: 300px;
+    width: 370px;
+    height: 37px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.username-login {
+    color: #000000;
+    text-align: left;
+    font-family: "Roboto-Italic", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: italic;
+    position: absolute;
+    left: 465px;
+    top: 305px;
+    width: 131px;
+    height: 21px;
+}
+
+.password-field {
+    background: #d9d9d9;
+    border-radius: 13px;
+    border-style: solid;
+    border-color: #000000;
+    border-width: 1px;
+    width: 370px;
+    height: 37px;
+    position: absolute;
+    left: 450px;
+    top: 380px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.password {
+    color: #000000;
+    text-align: left;
+    font-family: "Roboto-Italic", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: italic;
+    position: absolute;
+    left: 465px;
+    top: 385px;
+    width: 107px;
+    height: 26px;
+}
+
+.forgot-password {
+    color: #000000;
+    text-align: right;
+    font-family: "Roboto-ThinItalic", sans-serif;
+    font-size: 15px;
+    font-weight: 100;
+    font-style: italic;
+    position: absolute;
+    left: 640px;
+    top: 430px;
+    width: 171px;
+    height: 26px;
+}
+
+.login-button {
+    background: #d9d9d9;
+    border-radius: 13px;
+    width: 148px;
+    height: 60px;
+    position: absolute;
+    left: 580px;
+    top: 475px;
+}
+
+.login {
+    color: #000000;
+    text-align: center;
+    font-family: 'Press Start 2P', system-ui;
+    font-size: 20px;
+    font-weight: 400;
+    position: absolute;
+    left: 595px;
+    top: 490px;
+    width: 117px;
+    height: 37px;
+}
+
+
+/*Testing the new structure for my login*/
+
+/* Global styles */
+#login_container,
+#login_container * {
+    box-sizing: border-box;
+}
+
+/* Specific styles for elements */
+#login_container {
+    background: #ffffff;
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+    #login_container .app-title {
+        color: #000000;
+        text-align: center;
+        font-family: 'Press Start 2P', system-ui;
+        font-size: 24px;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+
+    #login_container form {
+        position: relative;
+        padding-top: 40px;
+        align-items: center; /* Center horizontally, but didn't work as expected */
+        justify-content: center; /* Center vertically, but didn't work as expected */
+        height: 100%;
+        margin-top: 40px;
+    }
+
+        #login_container form p.app-title {
+            position: absolute; 
+            top: -30px; 
+            left: 50%; 
+            transform: translateX(-50%);
+            width: 100%;
+            margin: 0; 
+        }
+
+    #login_container input[type="text"],
+    #login_container input[type="password"],
+    #login_container input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    #login_container input[type="submit"] {
+        background-color: #d9d9d9;
+        color: #000000;
+        cursor: pointer;
+    }
+
+        #login_container input[type="submit"]:hover {
+            background-color: #c0c0c0;
+        }
+
+    #login_container #error {
+        color: red;
+        text-align: center;
+        margin-top: 10px;
+    }
