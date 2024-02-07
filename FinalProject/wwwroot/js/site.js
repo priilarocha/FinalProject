@@ -27,7 +27,7 @@ function Send_User_Credentials() {
             //document.getElementById("error").innerHTML = data.responseText;
         },
         error: function (data) {
-            window.alert("error");
+            window.alert("Wrong Username or Password");
         }
     });
 }
