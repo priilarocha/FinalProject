@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace FinalProject.Controllers {
     public class UserController : Controller {
+
         private readonly UserDBContext _context;
 
         public UserController(UserDBContext context)
