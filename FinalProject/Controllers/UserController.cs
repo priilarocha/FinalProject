@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Web;
 using FinalProject.Data;
+using FinalProject.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FinalProject.Controllers {

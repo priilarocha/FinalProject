@@ -33,6 +33,11 @@ namespace FinalProject.Controllers
             return View();
         }
 
+        public IActionResult Registration() //This is the method that will be called when the user navigates to the registration page, it will be removed in case I decide to use a registration page out of home
+        {
+            return View();
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

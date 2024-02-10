@@ -249,7 +249,7 @@
     box-sizing: border-box;
 }
 
-/* Specific styles for elements */
+/* Specific styles for elements of my login page*/
 #login_container {
     background: #ffffff;
     width: 400px;
@@ -278,12 +278,12 @@
     }
 
         #login_container form p.app-title {
-            position: absolute; 
-            top: -30px; 
-            left: 50%; 
+            position: absolute;
+            top: -30px;
+            left: 50%;
             transform: translateX(-50%);
             width: 100%;
-            margin: 0; 
+            margin: 0;
         }
 
     #login_container input[type="text"],
@@ -312,3 +312,30 @@
         text-align: center;
         margin-top: 10px;
     }
+
+    /* Add styles for the registration submit button */
+    #login_container input[type="email"]
+    {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    #login_container a {
+        display: block;
+        text-align: center;
+        background-color: #d9d9d9;
+        color: #000000;
+        cursor: pointer;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        text-decoration: none;
+        margin-top: 10px; /* Adjust spacing */
+    }
+
+        #login_container a:hover {
+            background-color: #c0c0c0;
+        }
