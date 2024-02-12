@@ -23,6 +23,7 @@ public class Startup
         services.AddDbContext<UserDBContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
+
         // Add MVC services
         services.AddControllersWithViews();
     }

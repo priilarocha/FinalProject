@@ -7,9 +7,9 @@ namespace FinalProject.Controllers
 {
     public class RegistrationController : Controller
     {
-        private readonly UserDBContext _context;
+        private readonly Data.UserDBContext _context;
 
-        public RegistrationController(UserDBContext context)
+        public RegistrationController(Data.UserDBContext context)
         {
             _context = context;
         }
