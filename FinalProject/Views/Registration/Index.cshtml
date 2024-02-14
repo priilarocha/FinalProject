@@ -1,7 +1,9 @@
 ﻿@{
     ViewBag.Title = "Registration";
 }
-
+/*
+This is the old Registration mode, that wasn't working, now I'm using the Signup mode, that is working.
+*/
 <div id="login_container">
     @using (Html.BeginForm("Register", "Registration", FormMethod.Post))
     {
@@ -12,6 +14,7 @@
         <input type="text" id="Username" name="username" placeholder="Username" />
         <input type="password" id="Password" name="password" placeholder="Password" />
         <input type="submit" id="register" value="Register" onclick="Send_User_Registration()" />
+        <a href="/Login">Login</a>
     }
     <div id="error"></div>
 </div>

@@ -51,12 +51,12 @@ public class Startup
         app.UseEndpoints(endpoints =>
         {
             endpoints.MapControllerRoute(
-                name: "registration",
-                pattern: "Registration", // Adjust the URL pattern as needed
-                defaults: new { controller = "Registration", action = "Index" }); // Assuming Index is the action method for the registration page
+                name: "signup",
+                pattern: "Signup", // Adjust the URL pattern as needed
+                defaults: new { controller = "Signup", action = "Index" }); // Assuming Index is the action method for the registration page
             endpoints.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Registration}/{action=Index}/{id?}");
+                pattern: "{controller=Signup}/{action=Index}/{id?}");
         });
     }
 }
