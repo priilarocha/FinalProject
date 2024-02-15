@@ -16,16 +16,19 @@
 
     $.ajax({
         type: "POST",
-        processData: false, // Prevent jQuery from automatically serializing the data
-        contentType: false, // Use FormData content type
-        data: formData,
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        data: JSON.stringify({
+            Username: document.getElementById("Username").value,
+            Password: document.getElementById("Password").value
+        }),
         url: "/User/Login",
         success: function (data) {
             window.alert(data.responseText);
             // Optionally redirect to another page or update UI
         },
-        error: function (xhr, status, error) {
-            if (xhr.status === 401) {
+        error: function (data) {
+            if (data.status === 401) {
                 window.alert("Wrong Username or Password");
             } else {
                 window.alert("An error occurred: " + error);
@@ -61,13 +64,13 @@ function Send_User_Registration(event) {
         processData: false, // Prevent jQuery from automatically serializing the data
         contentType: false, // Use FormData content type
         data: formData,
-        url: "/User/Signup",
+        url: "/Signup",
         success: function (data) {
             window.alert(data.responseText);
             // Optionally redirect to another page or update UI
         },
-        error: function (xhr, status, error) {
-            if (xhr.status === 400) {
+        error: function (data) {
+            if (data.status === 400) {
                 window.alert("Username already exists");
             } else {
                 window.alert("An error occurred: " + error);

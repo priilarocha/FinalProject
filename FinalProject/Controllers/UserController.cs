@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Linq;
+using System;
 using System.Web;
 using FinalProject.Data;
 using FinalProject.Models;
@@ -14,9 +15,27 @@ namespace FinalProject.Controllers {
             _context = context;
         }
         [HttpPost]
-        [Consumes("application/json")]
-        public JsonResult Login([FromBody] User user) {
-            return Json(new { responseText = $"Username: {user.Username}\nPassword: {user.Password}" });
+        public IActionResult Login([FromBody] User user)
+        {
+            // Retrieve the user from the database based on the provided username
+            var dbUser = _context.Users.FirstOrDefault(u => u.Username == user.Username);
+
+            if (dbUser == null)
+            {
+                // User not found in the database
+                return Unauthorized(); // 401 Unauthorized status code
+            }
+
+            // Validate the password
+            if (dbUser.Password != user.Password)
+            {
+                // Incorrect password
+                return Unauthorized(); // 401 Unauthorized status code
+            }
+
+            // Authentication successful
+            // You might generate and return a token here for subsequent authenticated requests
+            return Ok(new { message = "Authentication successful" }); // 200 OK status code
         }
     }
 }
