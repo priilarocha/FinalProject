@@ -1,40 +1,29 @@
-﻿function Send_User_Credentials(event) {
-    event.preventDefault(); // Prevent default form submission
+﻿function Send_User_Credentials() {
 
     // Perform client-side validation
-    var username = document.getElementById("Username").value;
-    var password = document.getElementById("Password").value;
-    if (!username || !password) {
-        window.alert("Please provide both username and password.");
-        return;
+    if ((document.getElementById("Username").value == "") || (document.getElementById("Password").value == "")) {
+        window.alert("Please provide both username and password ..........");
+    } else {
+        $.ajax({
+            type: "POST",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            data: {
+                Username: document.getElementById("Username").value,
+                Password: document.getElementById("Password").value
+            },
+            url: "/User/Login",
+            success: function (response) {
+                window.alert(response.responseText);
+                // Optionally redirect to another page or update UI
+            },
+            failure: function (response) {
+                window.alert("Wrong Username or Password!!!");
+            }
+        });
     }
 
-    // Serialize form data using FormData
-    var formData = new FormData();
-    formData.append("Username", username);
-    formData.append("Password", password);
-
-    $.ajax({
-        type: "POST",
-        contentType: "application/json; charset=utf-8",
-        dataType: "json",
-        data: JSON.stringify({
-            Username: document.getElementById("Username").value,
-            Password: document.getElementById("Password").value
-        }),
-        url: "/User/Login",
-        success: function (data) {
-            window.alert(data.responseText);
-            // Optionally redirect to another page or update UI
-        },
-        error: function (data) {
-            if (data.status === 401) {
-                window.alert("Wrong Username or Password");
-            } else {
-                window.alert("An error occurred: " + error);
-            }
-        }
-    });
+    
 }
 
 function Send_User_Registration(event) {

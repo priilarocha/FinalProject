@@ -11,7 +11,7 @@
     overflow: hidden;
 }
 
-.profile-image {
+.main-image {
     width: 240px;
     height: 240px;
     position: absolute;
@@ -42,7 +42,7 @@
     object-fit: cover;
 }
 
-.username {
+.main-title {
     color: #000000;
     text-align: center;
     font-family: 'Press Start 2P', system-ui;
@@ -288,7 +288,8 @@
 
     #login_container input[type="text"],
     #login_container input[type="password"],
-    #login_container input[type="submit"] {
+    #login_container input[type="submit"],
+    #login_container button {
         width: 100%;
         padding: 10px;
         margin-bottom: 10px;
@@ -297,13 +298,18 @@
         font-size: 16px;
     }
 
-    #login_container input[type="submit"] {
+    #login_container input[type="submit"],
+    #login_container button {
         background-color: #d9d9d9;
         color: #000000;
         cursor: pointer;
     }
 
-        #login_container input[type="submit"]:hover {
+        #login_container input[type="submit"] :hover {
+            background-color: #c0c0c0;
+        }
+
+        #login_container button :hover {
             background-color: #c0c0c0;
         }
 

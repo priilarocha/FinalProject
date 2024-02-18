@@ -15,12 +15,13 @@ namespace FinalProject.Controllers {
             _context = context;
         }
         [HttpPost]
-        public IActionResult Login([FromBody] User user)
+        [Consumes("application/json")]
+        public JsonResult Login([FromBody] User user)
         {
             // Retrieve the user from the database based on the provided username
-            var dbUser = _context.Users.FirstOrDefault(u => u.Username == user.Username);
+            // var dbUser = _context.Users.FirstOrDefault(u => u.Username == user.Username);
 
-            if (dbUser == null)
+            /*if (dbUser == null)
             {
                 // User not found in the database
                 return Unauthorized(); // 401 Unauthorized status code
@@ -31,11 +32,12 @@ namespace FinalProject.Controllers {
             {
                 // Incorrect password
                 return Unauthorized(); // 401 Unauthorized status code
-            }
+            }*/
 
             // Authentication successful
             // You might generate and return a token here for subsequent authenticated requests
-            return Ok(new { message = "Authentication successful" }); // 200 OK status code
+            // return Json(new { responseText = $"Username: {user.Username}. Password: {user.Password}." }); // 200 OK status code
+            return Json(new { responseText = "Server RESPONSE" });
         }
     }
 }
