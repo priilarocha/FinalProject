@@ -16,7 +16,7 @@ namespace FinalProject.Controllers {
         }
         [HttpPost]
         [Consumes("application/json")]
-        public JsonResult Login([FromBody] User user)
+        public JsonResult Login([FromBody] UserLogin user)
         {
             // Retrieve the user from the database based on the provided username
             // var dbUser = _context.Users.FirstOrDefault(u => u.Username == user.Username);
