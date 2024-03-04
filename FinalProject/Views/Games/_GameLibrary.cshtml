@@ -1,0 +1,13 @@
+﻿@model IEnumerable<FinalProject.Models.Game>
+
+@foreach (var game in Model)
+{
+    <div class="game">
+        <h3>@game.Title</h3>
+        <img src="@game.Image" alt="Game Image" />
+        <p>@game.Genre</p>
+        <p>Released: @game.ReleaseDate?.ToString("d")</p>
+        <p>@game.Description</p>
+        // Include more details or actions (e.g., edit, delete) as needed
+    </div>
+}

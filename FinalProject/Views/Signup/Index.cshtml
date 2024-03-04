@@ -2,12 +2,12 @@
     @using (Html.BeginForm("Index", "Signup", FormMethod.Post))
     {
         <p class="app-title">GAME TRACKING<br>Registration</p>
-        <input type="text" id="Firstname" name="firstname" placeholder="First name" />
-        <input type="text" id="Lastname" name="lastname" placeholder="Last name" />
+        <input type="text" id="FirstName" name="firstname" placeholder="First name" />
+        <input type="text" id="LastName" name="lastname" placeholder="Last name" />
         <input type="email" id="Email" name="email" placeholder="Email" />
         <input type="text" id="Username" name="username" placeholder="Username" />
         <input type="password" id="Password" name="password" placeholder="Password" />
-        <input type="submit" id="register" value="Register" onclick="Send_User_Registration()" />
+        <input type="submit" id="Register" value="Register" onclick="Send_User_Registration()" />
         <a href="@Url.Action("Index", "Login")">Login</a>
     }
     <div id="error"></div>

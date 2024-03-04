@@ -81,7 +81,7 @@
     height: 37px;
 }
 
-.favoriteGame1 {
+.game-cover {
     width: 150px;
     height: 241.16px;
     position: absolute;
@@ -320,8 +320,7 @@
     }
 
     /* Add styles for the registration submit button */
-    #login_container input[type="email"]
-    {
+    #login_container input[type="email"] {
         width: 100%;
         padding: 10px;
         margin-bottom: 10px;
@@ -329,6 +328,7 @@
         border-radius: 5px;
         font-size: 16px;
     }
+
     #login_container a {
         display: block;
         text-align: center;
@@ -345,3 +345,96 @@
         #login_container a:hover {
             background-color: #c0c0c0;
         }
+
+/* New home/profile page settings */
+
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+    .profile-section img {
+        max-width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+
+/* Apply the .profile-section class to your favorites, playing-played, and wishlist divs */
+
+
+.user-profile {
+    /* Styles for the overall user profile layout */
+}
+
+.profile-header {
+    /* Styles for the user's profile header including the image and username */
+}
+
+.profile-picture {
+    /* Adapt the image size as needed */
+    max-width: 100px;
+    height: auto;
+    border-radius: 50%; /* Makes the image round */
+}
+
+.user-info {
+    text-align: center; /* Center the user's info */
+    margin-bottom: 20px; /* Spacing below the user info section */
+}
+
+
+.social-panel {
+    /* Styles for the social panel where friend icons will be shown */
+}
+
+.friends-list {
+    /* Styles for the friend list container */
+}
+
+.friend-icon {
+    /* Styles for each friend icon */
+    width: 50px; /* Example size, adjust as needed */
+    height: 50px; /* Example size, adjust as needed */
+    border-radius: 50%; /* Makes the images round */
+}
+
+/* Continue with styles for game library, achievements, and wishlist sections */
+
+.container {
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-picture {
+    width: 150px; /* Adjust as needed */
+    height: 150px; /* Adjust as needed */
+    border-radius: 50%; /* Makes the image round */
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.bio {
+    font-size: 1rem; /* Adjust as needed */
+    color: #333; /* Adjust as needed */
+    margin-bottom: 20px;
+}
+
+.profile-content section {
+    margin-bottom: 20px;
+}
+
+.profile-content .game-cover {
+    width: 100px; /* Adjust as needed */
+    height: auto;
+    margin: 10px;
+    border-radius: 10px; /* Adjust as needed for rounded corners */
+}

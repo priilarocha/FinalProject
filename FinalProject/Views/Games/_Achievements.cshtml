@@ -1,0 +1,14 @@
+﻿@model IEnumerable<FinalProject.Models.Achievement>
+
+<div class="achievements">
+    @foreach (var achievement in Model)
+    {
+        <div class="achievement">
+            <h4>@achievement.Title</h4>
+            <img src="@achievement.Image" alt="Achievement Image" />
+            <p>@achievement.Description</p>
+            <p>Unlocked: @(achievement.UnlockDate.HasValue ? achievement.UnlockDate.Value.ToString("d") : "Not Unlocked Yet")</p>
+            <p>Points: @achievement.Points</p>
+        </div>
+    }
+</div>

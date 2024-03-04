@@ -11,7 +11,6 @@ namespace FinalProject.Data
         }
 
         public DbSet<User> Users { get; set; }
-        public DbSet<UserLogin> UserLogins { get; set; }
         public DbSet<Game> Games { get; set; }
         public DbSet<Achievement> Achievements { get; set; }
     }

@@ -33,11 +33,14 @@ namespace FinalProject.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("GameId")
+                    b.Property<int>("GameId")
                         .HasColumnType("int");
 
                     b.Property<string>("Image")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsCompleted")
+                        .HasColumnType("bit");
 
                     b.Property<int?>("Points")
                         .HasColumnType("int");
@@ -137,32 +140,15 @@ namespace FinalProject.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("FinalProject.Models.UserLogin", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Username")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("UserLogins");
-                });
-
             modelBuilder.Entity("FinalProject.Models.Achievement", b =>
                 {
-                    b.HasOne("FinalProject.Models.Game", null)
+                    b.HasOne("FinalProject.Models.Game", "Game")
                         .WithMany("Achievements")
-                        .HasForeignKey("GameId");
+                        .HasForeignKey("GameId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Game");
                 });
 
             modelBuilder.Entity("FinalProject.Models.Platform", b =>

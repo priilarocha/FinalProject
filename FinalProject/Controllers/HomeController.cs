@@ -15,7 +15,9 @@ namespace FinalProject.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var model = new UserProfile(); // Make sure this is correctly initialized
+            model.Username = "YourUsername"; // Example of setting a property
+            return View(model); // Pass the model to the view
         }
 
         public IActionResult Privacy()
