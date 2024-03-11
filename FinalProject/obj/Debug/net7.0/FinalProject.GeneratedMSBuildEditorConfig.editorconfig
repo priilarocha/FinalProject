@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\priir\Documents\College\ThirdYear\Research\repos\FinalProject\FinalProject
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/priir/Documents/College/ThirdYear/Research/repos/FinalProject/FinalProject/Views/Games/AddGame.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZXNcQWRkR2FtZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/priir/Documents/College/ThirdYear/Research/repos/FinalProject/FinalProject/Views/Games/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

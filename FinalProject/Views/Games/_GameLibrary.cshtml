@@ -8,6 +8,15 @@
         <p>@game.Genre</p>
         <p>Released: @game.ReleaseDate?.ToString("d")</p>
         <p>@game.Description</p>
-        // Include more details or actions (e.g., edit, delete) as needed
+
+        <a href="@Url.Action("EditGame", "Games", new { id = game.Id })">Edit</a>
+        <a href="@Url.Action("DeleteGame", "Games", new { id = game.Id })" onclick="return confirm('Are you sure?');">Delete</a>
+        // Add other details or actions as needed
     </div>
 }
+
+@if (!Model.Any())
+{
+    <p>No games found. <a href="@Url.Action("AddGame", "Games")">Add a new game</a>.</p> // This message is displayed when there are no games in the database and include a link do add a new game.
+}
+

@@ -67,7 +67,7 @@ namespace FinalProject.Controllers
                 // Respond with success and message
                 return Json(new
                 {
-                    success = true, responseText = "Registration successful. Redirecting to login...", redirectToUrl = Url.Action("Index", "Home") });
+                    success = true, responseText = "Registration successful. Redirecting to login...", redirectToUrl = Url.Action("Index", "Login") });
             }
             else
             {

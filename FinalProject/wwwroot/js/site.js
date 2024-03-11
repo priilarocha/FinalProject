@@ -49,19 +49,17 @@ function Send_User_Registration() {
         }),
         url: "/User/Register",
         success: function (response) {
-            console.log(response); // Log the response for debugging
             if (response.success) {
-                window.alert(response.responseText); // Show success message
+                window.alert(response.responseText);
                 if (response.redirectToUrl) {
-                    window.location.href = response.redirectToUrl; // Redirect
+                    window.location.href = response.redirectToUrl;
                 }
             } else {
-                window.alert(response.responseText); // Show error message
+                window.alert(response.responseText);
             }
         },
 
         error: function (xhr) {
-            console.log(xhr.status, xhr.statusText); // Add this line for more detailed error info
             window.alert("An error occurred: " + xhr.responseText);
         }
     });
