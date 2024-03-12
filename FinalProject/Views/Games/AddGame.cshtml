@@ -31,7 +31,8 @@
         <span asp-validation-for="Description" class="text-danger"></span>
     </div>
 
-    <button type="submit" class="btn btn-primary">Add Game</button>
+   @*  <button type="submit" id="AddGame" class="btn btn-primary" onclick="Send_Game_Data()">Add Game</button> *@
+    <input type="submit" id="AddGame" value="AddGame" onclick="Send_Game_Data()" />
 </form>
 
 @section Scripts {
