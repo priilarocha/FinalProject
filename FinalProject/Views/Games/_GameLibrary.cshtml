@@ -4,14 +4,14 @@
 {
     <div class="game">
         <h3>@game.Title</h3>
-        <img src="@game.Image" alt="Game Image" />
+        @* <img src="@game.Image" alt="Game Image" /> *@
         <p>@game.Genre</p>
         <p>Released: @game.ReleaseDate?.ToString("d")</p>
         <p>@game.Description</p>
 
         <a href="@Url.Action("EditGame", "Games", new { id = game.Id })">Edit</a>
         <a href="@Url.Action("DeleteGame", "Games", new { id = game.Id })" onclick="return confirm('Are you sure?');">Delete</a>
-        // Add other details or actions as needed
+        <br></br>
     </div>
 }
 

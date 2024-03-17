@@ -102,16 +102,6 @@ function Send_Game_Data() {
     });
 }
 
-// Attach the event listener for the add game button
-/*document.addEventListener('DOMContentLoaded', function () {
-    var AddGame = document.getElementById("AddGame");
-    if (AddGame) {
-        AddGame.addEventListener("click", Send_Game_Data);
-    } else {
-        console.error("Add Game button not found");
-    }
-});*/
-
 // Attach event listeners to form submit buttons
 document.getElementById("Login").addEventListener("click", Send_User_Credentials);
 document.getElementById("Register").addEventListener("click", Send_User_Registration);

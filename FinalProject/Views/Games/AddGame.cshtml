@@ -1,10 +1,10 @@
 ﻿@model FinalProject.Models.Game
 
 @{
-    ViewData["Title"] = "Add Game";
+    ViewData["Title"] = "Add New Game";
 }
 
-<h2>Add New Game</h2>
+<h2>@ViewData["Title"]</h2>
 
 <form asp-action="AddGame" method="post">
     <div class="form-group">
@@ -32,7 +32,9 @@
     </div>
 
    @*  <button type="submit" id="AddGame" class="btn btn-primary" onclick="Send_Game_Data()">Add Game</button> *@
-    <input type="submit" id="AddGame" value="AddGame" onclick="Send_Game_Data()" />
+    @* <input type="submit" id="AddGame" value="AddGame" onclick="Send_Game_Data()" /> *@
+    <button type="button" id="AddGame" class="btn btn-primary" onclick="Send_Game_Data()">Add Game</button>
+
 </form>
 
 @section Scripts {

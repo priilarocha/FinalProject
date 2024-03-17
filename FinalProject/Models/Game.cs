@@ -13,7 +13,7 @@ namespace FinalProject.Models
         [DataType(DataType.Date)]
         public DateTime? ReleaseDate { get; set; }
         public string? Description { get; set; }
-        public List<Achievement> Achievements { get; set; }
+        public List<Achievement>? Achievements { get; set; }
 
     }
 
@@ -25,7 +25,7 @@ namespace FinalProject.Models
         public string? Description { get; set; }
         public bool IsCompleted { get; set; } // Indicates if the user has completed this achievement
         public int GameId { get; set; } // Foreign key to associate achievement with a game
-        public virtual Game Game { get; set; } // Navigation property to the Game
+        public virtual Game? Game { get; set; } // Navigation property to the Game
         public DateTime? UnlockDate { get; set; }
         public int? Points { get; set; }
 
@@ -34,6 +34,6 @@ namespace FinalProject.Models
     public class Platform
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+        public string? Name { get; set; }
     }
 }

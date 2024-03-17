@@ -30,18 +30,38 @@ namespace FinalProject.Controllers
             return View();
         }
 
+        public UserDBContext Get_context() => _context;
+
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult AddGame(Game model)
+        [Consumes("application/json")]
+        
+        public JsonResult AddGame([FromBody] Game games)
         {
             if (ModelState.IsValid)
             {
-                _context.Games.Add(model);
+                // Check if the game title already exists
+                var gameExists = _context.Games.Any(g => g.Title == games.Title);
+                if (gameExists)
+                {
+                    // If the game exists, do not add to the database and return an appropriate message
+                    return Json(new { success = false, responseText = "This title already exists." });
+                }
+                // Since the tile does not exist, add the new game to the database
+                _context.Games.Add(games);
                 _context.SaveChanges();
-                return RedirectToAction("GameLibrary");
-            }
 
-            return View(model);
+                return Json(new
+                {
+                    success = true,
+                    responseText = "Game resgistered!",
+                    redirectToUrl = Url.Action("AddGame", "Games")
+                });
+            }
+            else
+            {
+                // Model state is not valid, return an error message
+                return Json(new { success = false, responseText = "Registration data is not valid." });
+            }
         }
     }
 }
